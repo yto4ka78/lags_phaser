@@ -10,8 +10,6 @@ new Phaser.Game({
   height: 600,
   title: 'Phaser RPG',
   scene: scenes,
-  url: import.meta.env.URL || '',
-  version: import.meta.env.VERSION || '0.0.1',
   backgroundColor: '#fff',
   physics: {
     default: 'arcade',

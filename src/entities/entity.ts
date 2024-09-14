@@ -1,24 +1,11 @@
 
-import { SpineGameObject } from "@esotericsoftware/spine-phaser";
+import { SpineGameObject, SpinePlugin } from "@esotericsoftware/spine-phaser";
 
-export class Entity extends Phaser.Physics.Arcade.Sprite {
-    protected spineCharacter: SpineGameObject;
-    
-    constructor(scene: Phaser.Scene, x: number, y: number, texture?: string, skeletonKey?: string) {
-        super(scene, x, y, texture || '');
+export class Entity extends SpineGameObject {
+
+    constructor(scene: Phaser.Scene, plugin: SpinePlugin, x: number, y: number, dataKey: string, atlasKey: string) {
+        super(scene, plugin, x, y, dataKey, atlasKey);
         this.scene = scene;
-        
-        // Добавляем физическое тело
-        this.scene.add.existing(this);
-        this.scene.physics.add.existing(this);
-        this.setCollideWorldBounds(true); // Ограничение по границам сцены
-        
-        // Создаем персонажа Spine
-        this.spineCharacter = this.scene.add.spine(x, y, skeletonKey, '');
-        this.spineCharacter.setScale(0.5);
-        
-        // Добавляем Spine персонажа на сцену
-        this.scene.add.existing(this.spineCharacter);
     }
 }
 

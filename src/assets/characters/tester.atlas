@@ -1,0 +1,19 @@
+tester.png
+size: 371,300
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+23
+  rotate: false
+  xy: 4, 4
+  size: 292, 292
+  orig: 309, 292
+  offset: 0, 0
+  index: -1
+24
+  rotate: true
+  xy: 300, 66
+  size: 230, 67
+  orig: 230, 67
+  offset: 0, 0
+  index: -1
