@@ -14,14 +14,16 @@ new Phaser.Game({
   physics: {
     default: 'arcade',
     arcade: {
-      debug : true
-    }
+      debug: true
+    } //TEST
   },
   plugins: {
     scene: [
-      {  key: 'SpinePlugin',
+      {
+        key: 'SpinePlugin',
         plugin: SpinePlugin,
-        mapping: 'spine' }
+        mapping: 'spine'
+      }
     ]
   },
   scale: {
